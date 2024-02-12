@@ -103,6 +103,9 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     if (webView != _webView) { return; }
     
+    /// Sherpa: force javascript injection
+    [_base injectJavascriptFile];
+
     __strong typeof(_webViewDelegate) strongDelegate = _webViewDelegate;
     if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:didFinishNavigation:)]) {
         [strongDelegate webView:webView didFinishNavigation:navigation];
@@ -164,6 +167,9 @@
     if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:didStartProvisionalNavigation:)]) {
         [strongDelegate webView:webView didStartProvisionalNavigation:navigation];
     }
+
+        /// Sherpa: force javascript injection
+    [_base injectJavascriptFile];
 }
 
 
