@@ -37,6 +37,7 @@
 + (instancetype)bridge:(id)webView;
 
 + (void)enableLogging;
++ (void)disableLogging;
 + (void)setLogMaxLength:(int)length;
 
 - (void)registerHandler:(NSString*)handlerName handler:(WVJBHandler)handler;

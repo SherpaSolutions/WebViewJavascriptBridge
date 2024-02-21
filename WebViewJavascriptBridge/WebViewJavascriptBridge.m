@@ -31,6 +31,9 @@
 + (void)enableLogging {
     [WebViewJavascriptBridgeBase enableLogging];
 }
++ (void)disableLogging {
+    [WebViewJavascriptBridgeBase disableLogging];
+}
 + (void)setLogMaxLength:(int)length {
     [WebViewJavascriptBridgeBase setLogMaxLength:length];
 }

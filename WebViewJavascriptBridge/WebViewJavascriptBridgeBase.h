@@ -30,6 +30,7 @@ typedef NSDictionary WVJBMessage;
 @property (strong, nonatomic) WVJBHandler messageHandler;
 
 + (void)enableLogging;
++ (void)disableLogging;
 + (void)setLogMaxLength:(int)length;
 - (void)reset;
 - (void)sendData:(id)data responseCallback:(WVJBResponseCallback)responseCallback handlerName:(NSString*)handlerName;

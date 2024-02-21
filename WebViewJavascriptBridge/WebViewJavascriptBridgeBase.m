@@ -18,6 +18,7 @@ static bool logging = false;
 static int logMaxLength = 500;
 
 + (void)enableLogging { logging = true; }
++ (void)disableLogging { logging = false; }
 + (void)setLogMaxLength:(int)length { logMaxLength = length;}
 
 - (id)init {
