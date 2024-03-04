@@ -29,7 +29,6 @@ Misc
 
 - [ ] Clean up webview delegate - can we get away without passing through one now?
 - [ ] Make bridge a subclass of UI/WKWebView
-- [ ] Scrap UIWebView?
 - [ ] Style consistency through all code
 - [ ] Test pod
 - [X] Fix OSX lint warnings (`pod spec lint`)

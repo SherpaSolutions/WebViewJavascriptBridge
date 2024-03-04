@@ -23,7 +23,7 @@ v5.1.0
 + New instructions & templates for github issues and pull requests.
 
 v5.0.5
-+ Run all tests for both UIWebView and WKWebView webviews/bridges.
++ Run all tests for WKWebView webviews/bridges.
 + Allow for calling handlers from JS with just a handler name and responseCallback function (#184).
 
 v5.0.3 & v5.0.4
@@ -98,7 +98,7 @@ v2.0.0
 + Responses expect either an error or data (`-(void)respond:(id)data`, -(void)respondWithError:(id)error)
 
 v0.0.1
-+ ObjC: A WebViewJavascriptBridge class (a UIWebViewDelegate) that enables message passing to and from the JS
++ ObjC: A WebViewJavascriptBridge class that enables message passing to and from the JS
 + ObjC: A protocol called WebViewJavascriptBridgeDelegate that lets you handle messages received from the JS
 + JS: Event when the bridge is ready - document.addEventListener('WebViewJavascriptBridgeReady', function() {}, false)
 + JS: Ability to set your message handler - WebViewJavascriptBridge.setMessageHandler(function() {})

@@ -22,30 +22,4 @@
     #define WVJB_WEBVIEW_TYPE WebView
     #define WVJB_WEBVIEW_DELEGATE_TYPE NSObject<WebViewJavascriptBridgeBaseDelegate>
     #define WVJB_WEBVIEW_DELEGATE_INTERFACE NSObject<WebViewJavascriptBridgeBaseDelegate, WebPolicyDelegate>
-#elif defined __IPHONE_OS_VERSION_MAX_ALLOWED
-    #import <UIKit/UIWebView.h>
-    #define WVJB_PLATFORM_IOS
-    #define WVJB_WEBVIEW_TYPE UIWebView
-    #define WVJB_WEBVIEW_DELEGATE_TYPE NSObject<UIWebViewDelegate>
-    #define WVJB_WEBVIEW_DELEGATE_INTERFACE NSObject<UIWebViewDelegate, WebViewJavascriptBridgeBaseDelegate>
 #endif
-
-@interface WebViewJavascriptBridge : WVJB_WEBVIEW_DELEGATE_INTERFACE
-
-
-+ (instancetype)bridgeForWebView:(id)webView;
-+ (instancetype)bridge:(id)webView;
-
-+ (void)enableLogging;
-+ (void)disableLogging;
-+ (void)setLogMaxLength:(int)length;
-
-- (void)registerHandler:(NSString*)handlerName handler:(WVJBHandler)handler;
-- (void)removeHandler:(NSString*)handlerName;
-- (void)callHandler:(NSString*)handlerName;
-- (void)callHandler:(NSString*)handlerName data:(id)data;
-- (void)callHandler:(NSString*)handlerName data:(id)data responseCallback:(WVJBResponseCallback)responseCallback;
-- (void)setWebViewDelegate:(id)webViewDelegate;
-- (void)disableJavscriptAlertBoxSafetyTimeout;
-
-@end
