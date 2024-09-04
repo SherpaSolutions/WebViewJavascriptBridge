@@ -21,6 +21,7 @@
  *****/
 
 + (void)enableLogging { [WebViewJavascriptBridgeBase enableLogging]; }
++ (void)disableLogging { [WebViewJavascriptBridgeBase disableLogging]; }
 
 + (instancetype)bridgeForWebView:(WKWebView*)webView {
     WKWebViewJavascriptBridge* bridge = [[self alloc] init];
