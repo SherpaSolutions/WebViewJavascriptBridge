@@ -1,0 +1,5 @@
+module WebViewJavascriptBridge {
+    umbrella "WebViewJavascriptBridge"
+    export *
+    module * { export * }
+}
